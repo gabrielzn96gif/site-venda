@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCell - Acessórios Pronta Entrega</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .btn-pulse {
+            animation: pulse-subtle 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Configuração do WhatsApp -->
+    <script>
+        // DIGITE SEU NÚMERO COM DDD AQUI (ex: 5584999999999)
+        const SEU_WHATSAPP = "5500000000000"; 
+    </script>
+
+    <!-- Barra de Urgência Topo (Foco Local) -->
+    <div class="bg-amber-500 text-slate-900 text-xs font-bold text-center py-2 px-4 shadow-sm flex items-center justify-center gap-2">
+        <i class="fa-solid fa-store text-slate-900"></i>
+        <span>PRONTA ENTREGA: Reserve pelo site e retire hoje mesmo ou peça pelo Uber Flash!</span>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-xl border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-amber-400"></i>
+                <span>Tech<span class="text-amber-400">Cell</span></span>
+            </a>
+            
+            <button id="open-cart-btn" class="relative bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl font-bold transition flex items-center gap-2 shadow-lg shadow-emerald-900/40">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="hidden sm:inline text-sm">Meu Pedido</span>
+                <span id="cart-count" class="bg-red-500 text-white text-xs font-black px-2 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="bg-slate-900 text-white py-12 px-4 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="bg-amber-400/10 text-amber-400 border border-amber-400/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                Retirada Imediata na Loja
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-black mb-4 leading-tight">
+                Proteja seu Celular Hoje <br class="hidden sm:inline"><span class="text-amber-400">Sem Esperar Dias na Internet!</span>
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                Produtos a pronta entrega. Monte seu pedido, escolha se prefere retirar na loja ou enviar Uber Flash para buscar.
+            </p>
+            
+            <!-- Provas Sociais / Selos -->
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-semibold text-slate-300">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-star text-amber-400"></i> 4.9/5 Avaliações</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Garantia de Troca Local</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-amber-400"></i> Retirada em minutos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grade de Produtos -->
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-1">
+        <div class="flex items-center justify-between mb-8 border-b border-gray-200 pb-4">
+            <h2 class="text-2xl font-black text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-fire-flame-curved text-red-500"></i> Em Estoque
+            </h2>
+            <span class="text-xs font-bold text-red-600 bg-red-100 px-3 py-1 rounded-full">Retirada Imediata</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Produto 1 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601593378480-f03495d637c7?w=600&q=80" alt="Capa Anti-Impacto" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Mais Vendida</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(142)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Capinha Space Transparent Anti-Impacto</h3>
+                        <p class="text-gray-600 text-xs mb-4">Proteção contra quedas de até 2 metros. Não amarela e mantém o design original do celular.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 39,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 59,90</span>
+                    </div>
+                    <button onclick="addToCart('Capinha Space Transparent', 39.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md btn-pulse">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&q=80" alt="Carregador Turbo" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Carregamento Rápido</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(98)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Kit Carregador Turbo 20W + Cabo Type-C</h3>
+                        <p class="text-gray-600 text-xs mb-4">Carrega de 0% a 60% em apenas 30 minutos. Proteção inteligente contra superaquecimento.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 79,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 119,90</span>
+                    </div>
+                    <button onclick="addToCart('Kit Carregador Turbo 20W', 79.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80" alt="Fone Bluetooth" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Som Premium</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(210)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Fone de Ouvido Bluetooth TWS Pro</h3>
+                        <p class="text-gray-600 text-xs mb-4">Graves potentes, bateria de 6 horas de duração e cancelamento de ruído passivo.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 129,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 189,90</span>
+                    </div>
+                    <button onclick="addToCart('Fone Bluetooth TWS Pro', 129.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=600&q=80" alt="Película 3D" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-slate-900 text-white text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Blindada</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(76)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Película de Vidro 3D Cobertura Total</h3>
+                        <p class="text-gray-600 text-xs mb-4">Vidro temperado 9H. Protege a tela inteira sem perder a sensibilidade do toque.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 29,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 45,00</span>
+                    </div>
+                    <button onclick="addToCart('Película 3D Cobertura Total', 29.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&q=80" alt="Cabo Reinforced" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-slate-900 text-white text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Ultra Resistente</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(115)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Cabo Trançado Reforçado 2 Metros</h3>
+                        <p class="text-gray-600 text-xs mb-4">Nylon militar blindado. Não parte na ponta e suporta mais de 10.000 dobras.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 34,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 55,00</span>
+                    </div>
+                    <button onclick="addToCart('Cabo Trançado Reforçado 2m', 34.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition group">
+                <div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=600&q=80" alt="Suporte Veicular" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-extrabold px-2.5 py-1 rounded-md uppercase">Praticidade</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 font-normal ml-1">(89)</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-lg mb-1">Suporte Veicular Magnético Neodímio</h3>
+                        <p class="text-gray-600 text-xs mb-4">Imã potente de ultra fixação. O celular não cai nem em buracos ou lombadas.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-slate-900">R$ 39,90</span>
+                        <span class="text-sm text-gray-400 line-through">R$ 60,00</span>
+                    </div>
+                    <button onclick="addToCart('Suporte Veicular Magnético', 39.90)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-cart-plus"></i> RESERVAR PARA RETIRADA
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal do Carrinho -->
+    <div id="cart-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex justify-end">
+        <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between">
+            
+            <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping text-amber-400"></i>
+                    <h3 class="font-black text-lg">Reserva do Pedido</h3>
+                </div>
+                <button id="close-cart-btn" class="text-gray-400 hover:text-white p-2">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <div id="cart-items" class="p-4 flex-1 overflow-y-auto divide-y divide-gray-100">
+                <!-- Itens inseridos dinamicamente -->
+            </div>
+
+            <div class="p-5 border-t bg-slate-50 flex flex-col gap-4">
+                <div class="flex items-center justify-between font-black text-xl text-slate-900">
+                    <span>Total do Pedido:</span>
+                    <span id="cart-total" class="text-emerald-600">R$ 0,00</span>
+                </div>
+                <button onclick="sendToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 rounded-xl transition flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/30 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    ENVIAR RESERVA NO WHATSAPP
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-xs border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 TechCell. Vendas e Retiradas Locais.</p>
+            <div class="flex gap-4 text-lg text-slate-300">
+                <i class="fa-brands fa-pix" title="Aceitamos Pix"></i>
+                <i class="fa-solid fa-credit-card" title="Cartões de Crédito"></i>
+                <i class="fa-solid fa-money-bill-1-wave" title="Dinheiro"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica JS -->
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            const item = cart.find(i => i.name === name);
+            if (item) {
+                item.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCart();
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(i => i.name !== name);
+            updateCart();
+        }
+
+        function updateCart() {
+            const container = document.getElementById('cart-items');
+            container.innerHTML = '';
+            let total = 0;
+            let count = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-400 py-12 text-sm font-medium">Seu carrinho está vazio.<br>Escolha um produto acima!</p>';
+            } else {
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    count += item.quantity;
+
+                    const div = document.createElement('div');
+                    div.className = 'py-4 flex items-center justify-between gap-3';
+                    div.innerHTML = `
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">${item.name}</h4>
+                            <span class="text-xs text-gray-500">${item.quantity}x R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-black text-sm text-slate-900">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+                            <button onclick="removeFromCart('${item.name}')" class="text-red-500 hover:text-red-700 p-1">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+            }
+
+            document.getElementById('cart-count').textContent = count;
+            document.getElementById('cart-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+
+        function sendToWhatsApp() {
+            if (cart.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+
+            let text = "📌 *NOVO PEDIDO - RETIRADA LOCAL* 📌\n\n";
+            let total = 0;
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                text += `▪️ ${item.quantity}x ${item.name} - R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+            });
+
+            text += `\n💰 *TOTAL:* R$ ${total.toFixed(2).replace('.', ',')}`;
+            text += "\n\n📍 *Gostaria de saber o endereço para buscar (ou pedir Uber Flash) e a chave PIX para pagamento!*";
+
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${SEU_WHATSAPP}?text=${encodedText}`, '_blank');
+        }
+
+        document.getElementById('open-cart-btn').addEventListener('click', () => {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        });
+
+        document.getElementById('close-cart-btn').addEventListener('click', () => {
+            document.getElementById('cart-modal').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
